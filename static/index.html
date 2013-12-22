@@ -1,0 +1,20 @@
+<doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Числа</title>
+  </head>
+  <body>
+    <p>Числа:</p>
+    <ul data-bind="foreach: numbers">
+        <li data-bind="text: $data"></li>
+    </ul>
+
+    <p>Всего чисел: <span data-bind="text: numbers().length"></span></p>
+    <div><input type="button" id="remove" value="Удалить число" data-bind="click: remove, disable: isEmpty"/> | <input type="button" id="refresh" value="Обновить" data-bind= "click: refresh"/></div>
+
+    <script src="/static/js/jquery-1.10.2.js"></script>
+    <script src="/static/js/knockout-3.0.0.debug.js"></script>
+    <script src="/static/js/numbers.js"></script>
+  </body>
+</html>
