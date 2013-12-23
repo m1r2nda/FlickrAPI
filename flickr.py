@@ -134,6 +134,7 @@ def get_photos():
 
 
 if __name__ == '__main__':
-	run(host='localhost', port=8080)
+	run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+	#run(host='localhost', port=8080)
 	#raw_input("Press Enter to continue... ")
 
